@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+.circulo{
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: red;
+    position:fixed;
+    transition-duration: 2s;
+    transform: translateX(-50%) translateY(-50%);
+ 
+
+}
+.message-ball{
+ text-align: center;
+ line-height: 200px;
+}
+
+</style>
+</head>
+<body>
+<input type="button" id="botonStart" value="Comenzar">
+
+
+<script>
+
+document.querySelector("#botonStart").addEventListener("click", go);
+
+function go() {
+    showCircle(150, 150, 100).then(
+        div => {
+            div.classList.add('message-ball');
+            div.append("Hello, world!");
+            });
+}
+
+function showCircle(cx,cy,radius, callback){
+    // Crear un elemento div.
+    // Añadir la clase ciruclo al elemento div creado.
+    // Situar el elemento (left y top) en la posición cx cy
+    // Añadir el elemento al DOM.
+    // Esperar un instante a que se dibuje (setTimeOut) y modificar su tamaño al indicado por radius
+    // Cuando termine la transformación del elemento, ejecutar la función callback
+
+    //código callback
+
+}
+
+</script>
+</body>
+</html>
